@@ -1,0 +1,23 @@
+{
+    "name": "nonozgytb/mvctest",
+    "authors": [
+        {
+            "name": "NonozgYtb",
+            "email": "nonozg.ytb@gmail.com"
+        }
+    ],
+    "require": {
+        "michelf/php-markdown": "^1.9",
+        "symfony/var-dumper": "^4.4",
+        "doctrine/cache": "^1.10",
+        "symfony/console": "^4.4",
+        "nonozgytb/altorouter": "0.1",
+        "filp/whoops": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Controller\\": "controller/",
+            "App\\": "app/"
+        }
+    }
+}
