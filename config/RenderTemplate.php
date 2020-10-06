@@ -44,7 +44,6 @@ class RenderTemplate
             <meta name="author" content="<?= $RenderAPI->getHead()["author"] ?? "NonozgYtb" ?>">
             <meta name="language" content="fr">
             <meta http-equiv="Content-Language" content="fr">
-            <link rel="icon" href="/errorfile/errorfavicon.png" sizes="240x240">
             <?= static::getHeadStr() ?>
         </head>
 

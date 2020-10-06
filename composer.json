@@ -15,7 +15,7 @@
         "nonozgytb/altorouter": "0.3",
         "filp/whoops": "^2.7",
         "twig/twig": "^2.13",
-        "gajus/dindent": "^2.0"
+        "nonozgytb/indent": "dev-master"
     },
     "autoload": {
         "psr-4": {

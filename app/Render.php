@@ -4,7 +4,7 @@ namespace App;
 
 use App\Config\RenderTemplate;
 use App\Exceptions\RenderingException;
-use Gajus\Dindent\Indenter;
+use NonozgYtb\Indent\Indenter;
 use App\Utils\Str;
 
 require("./vendor/autoload.php");
