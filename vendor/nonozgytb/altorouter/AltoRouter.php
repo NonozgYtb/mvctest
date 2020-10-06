@@ -133,6 +133,19 @@ class AltoRouter
      */
     public function map($method, $route, $target, $name = null)
     {
+        /*if (strlen($route) > 2) {
+            //dump($route);
+            if (!self::endsWith($route, "/")) {
+                $this->map($method, $route . "/", $target, $name = null);
+                dump($route . "/", $this->routeIsset($method, $route . "/"), $this->routeIsset($method, $route), $this->routeIsset($method,substr($route, 0, -1) . "/"));
+            } elseif (self::endsWith($route, "/") && !self::secondEndsWith($route, "/")) {
+                $this->map($method, substr($route, 0, -1), $target, $name = null);
+                dump(2, $route . "/", $this->routeIsset($method, $route . "/"), $this->routeIsset($method, $route), $this->routeIsset($method,substr($route, 0, -1) . "/"));
+            }else{
+                dump(3);
+            };
+        }*/
+
         $this->routes[] = [$method, $route, $target, $name];
 
         if ($name) {
@@ -284,7 +297,7 @@ class AltoRouter
             }
         }
 
-        return $requestUrl;
+        return false;
     }
 
     private static function getverif($get)
@@ -332,6 +345,17 @@ class AltoRouter
         }
         return "`^$route$`u";
     }
+
+    /*private static function startsWith($haystack, $needle)
+    {
+        $length = strlen($needle);
+        return substr($haystack, 0, $length) === $needle;
+    }
+    private static function secondStartsWith($haystack, $needle)
+    {
+        $length = strlen($needle);
+        return substr($haystack, 1, $length) === $needle;
+    }*/
 
     private static function endsWith($haystack, $needle)
     {
