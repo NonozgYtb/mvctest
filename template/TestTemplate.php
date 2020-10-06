@@ -70,74 +70,14 @@ use App\Render; ?>
   </div>
 </footer>
 
-<!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Plugin JavaScript -->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<!-- Contact form JavaScript -->
 <script src="js/jqBootstrapValidation.js"></script>
-<!--<script src="js/contact_me.js"></script>-->
 
-<!-- Custom scripts for this template -->
 <script src="js/agency.min.js"></script>
-
-<style>
-  .carousel-item img {
-    /*object-fit:cover;*/
-    min-height: 300px;
-  }
-
-  .carousel-caption h5 {
-    border-bottom: 2px #ffffff36 solid;
-    padding-bottom: 6px;
-  }
-
-  .control-buttons {
-    text-align: center;
-  }
-
-  .transition-timer-carousel-progress-bar {
-    height: 3px;
-    background-color: white;
-    width: 0;
-    margin: 0 0 0 0;
-    border: none;
-    z-index: 11;
-    position: relative;
-  }
-
-  .carousel-control {
-    z-index: 11;
-  }
-
-  #carouselExampleIndicators {
-    background: #212529;
-  }
-
-  li[data-target].active {
-    transform: translateY(-5px);
-  }
-
-  li[data-target] {
-    transition: 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
-  }
-</style>
-
-<script>
-  $('#carouselExampleIndicators').carousel({
-    interval: 9999999,
-    keyboard: false,
-  });
-
-  $('#carouselExampleIndicators').on('slide.bs.carousel', function(e) {
-    $('.transition-timer-carousel-progress-bar')[0].style.width = (100 / (e.isTrigger - 1) * e.to) + "%";
-    $('.transition-timer-carousel-progress-bar')[0].style.transition = "1s cubic-bezier(0.65, 0.05, 0.36, 1)";
-
-  })
-</script>
 
 <?= Render::getInstance()
   ->setHeadStr('<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">')
