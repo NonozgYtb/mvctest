@@ -4018,7 +4018,7 @@ input[type="button"].btn-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0.5rem 1rem; }
+  padding: 0.5rem 2rem; }
   .navbar .container,
   .navbar .container-fluid,
   .navbar .container-sm,
@@ -4028,12 +4028,18 @@ input[type="button"].btn-block {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
+  @media (max-width: 1199.98px) {
+    .navbar .container {
+      width: 100%;
+      max-width: unset;
+      margin-left: 0;
+      margin-right: 0; } }
 
 .navbar-brand {
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap; }
@@ -4050,8 +4056,8 @@ input[type="button"].btn-block {
     padding-right: 0;
     padding-left: 0; }
   .navbar-nav .dropdown-menu {
-    position: static;
-    float: none; }
+    float: none;
+    box-shadow: 0 4px 17px -4px black; }
 
 .navbar-text {
   display: inline-block;
