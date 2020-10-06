@@ -1,0 +1,424 @@
+@import url("./src/customfont/customfont.css");
+@import url("./src/segoe-ui-font/style.css");
+@import url("./src/flag-font/css/flag-icon.css");
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+.display-4-copy {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.no-border {
+    border-color: transparent;
+    border: 0px;
+}
+
+.bg-yellow {
+    background: #f6c23e;
+    background-color: #f6c23e;
+}
+
+.row-copy {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 1px;
+}
+
+.prel-warp {
+    white-space: normal !important;
+}
+
+.no-warp {
+    white-space: nowrap;
+}
+
+.max-height-10em {
+    max-height: 10em;
+}
+
+.marg-down-0-5em {
+    margin-bottom: 0.5em;
+}
+
+.input-disabled-div {
+    background-color: #eaecf4;
+    border-radius: 0.35rem;
+    border: 1px solid #d1d3e2;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    background-clip: padding-box;
+}
+
+.w-25pp {
+    width: 25%
+}
+
+.v-a-c {
+    vertical-align: middle !important;
+}
+
+.w-h-1em {
+    width: 1em;
+    height: 1em;
+}
+
+.w-h-2em {
+    width: 2em;
+    height: 2em;
+}
+
+.btn-place {
+    height: 38px;
+    min-width: 10px
+}
+
+.segoe {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.pad-txt-shop {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.f-s-75 {
+    font-size: 0.75em;
+}
+
+.f-s-70 {
+    font-size: 0.70em;
+}
+
+.segoi {
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+    height: 100%
+}
+
+.shop-t-f {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.d-flash {
+    z-index: 100;
+}
+
+.no-marg {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.no-pad {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+.vert-align {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.marg-10p {
+    padding: 10% 10% 10% 10%;
+}
+
+.r-img {
+    border-radius: 50%;
+}
+
+.color-y {
+    color: #FED136;
+}
+
+.color-g {
+    color: #212529;
+}
+
+.db-sidebar-text {
+    font-size: larger;
+}
+
+.icon-div-center {
+    align-content: center;
+}
+
+.form-rounded {
+    border-radius: 0.75em;
+}
+
+.txtr {
+    text-align: right;
+}
+
+.txtc {
+    text-align: center;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.row {
+    width: 100%;
+    min-height: 1px;
+}
+
+.o1 {
+    height: 200px;
+    position: relative;
+}
+
+.o2 {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.space-1em {
+    min-width: 1px;
+    width: 1px;
+    min-height: 1em;
+    height: 1em;
+}
+
+.space-2em {
+    min-width: 1px;
+    width: 1px;
+    min-height: 2em;
+    height: 2em;
+}
+
+.space-10px {
+    min-width: 1px;
+    width: 1px;
+    min-height: 10px;
+    height: 10px;
+}
+
+.space-50px {
+    min-width: 1px;
+    width: 1px;
+    min-height: 1px;
+    height: 50px;
+}
+
+.hide {
+    display: none;
+}
+
+.rounded-0-75 {
+    border-radius: 0.75em;
+}
+
+.shop-frame {
+    background: #ffffff;
+    border-radius: 0.75em;
+    border: 1px solid #d8d7d7;
+    box-shadow: 0px 3px 12px 4px rgba(0, 0, 0, 0.25);
+}
+
+.shop-separate {
+    margin: 0 10% 0 10%;
+    min-width: 1px;
+    min-height: 1px;
+    height: 1px;
+    background-color: rgba(46, 45, 45, 0.644);
+}
+
+.float-right {
+    float: right!important;
+}
+
+.headspace {
+    box-sizing: border-box;
+    display: block;
+    content: "";
+    min-height: 66px;
+    height: 66px;
+    min-width: 1px;
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .md-float-right {
+        float: right!important;
+    }
+    .md-h-100p {
+        height: 100%
+    }
+    .md-placeholder-hide::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: transparent;
+    }
+    .md-placeholder-hide:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: transparent;
+    }
+    .md-placeholder-hide::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: transparent;
+    }
+    .md-placeholder-hide::placeholder {
+        /* Mozilla Firefox 19+ */
+        color: transparent;
+    }
+    .md-placeholder-hide :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: transparent;
+    }
+    .md-pad-30 {
+        width: 100%;
+        height: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .md-m-w-135 {
+        max-width: 135%;
+    }
+    .sm-hide {
+        display: initial;
+    }
+    .md-hide {
+        display: none;
+    }
+    .md-txtr {
+        text-align: right;
+    }
+    .md-txtc {
+        text-align: center;
+    }
+    .md-undrlin {
+        border-bottom: 1px solid rgb(59, 59, 59);
+    }
+}
+
+@media (max-width:768px) {
+    .col-sm-mdstop-12 {
+        width: 100%;
+    }
+    .sm-no-pad-sides {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .sm-no-marg {
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+    .sm-no-pad {
+        padding-top: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+    }
+    .sm-left-rounded-input {
+        border-top-left-radius: 0.3em !important;
+        border-bottom-left-radius: 0.3em !important;
+    }
+    .m-w-110 {
+        max-width: 110%;
+    }
+    .sm-hide {
+        display: none;
+    }
+    .md-hide {
+        display: initial;
+    }
+    .sm-float-right {
+        float: right!important;
+    }
+    .sm-undrlin {
+        border-bottom: 1px solid rgb(59, 59, 59);
+    }
+    .sm-space-10px {
+        min-width: 1px;
+        width: 1px;
+        min-height: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-height:570px),
+(max-width:350px) {
+    .mobile-col-safe {
+        margin-top: 65px;
+    }
+    .mobile-col-safe-f {
+        margin-top: initial;
+    }
+}
+
+@media (max-width:992px) {
+    .sm-h-180px {
+        min-height: 180px;
+        height: 180px;
+        min-width: 10px;
+    }
+    .shop-frame {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .sm-spacer {
+        min-width: 1px;
+        width: 1px;
+        min-height: 20px;
+        height: 20px;
+    }
+}
+
+@media (min-width:992px) {
+    .sm-spacer {
+        min-width: 0;
+        max-width: 0;
+        width: 0;
+        min-height: 0;
+        max-height: 0;
+        height: 0;
+        display: none;
+    }
+    .lg-hide {
+        display: none;
+    }
+}
+
+@media (max-height:300px) {
+    .mobile-col-safe {
+        margin-top: 320px;
+    }
+    .mobile-col-safe-f {
+        margin-top: 200px;
+    }
+}
+
+@media (min-height:400px) and (min-width:400px) {
+    .mobile-col-safe {
+        margin-top: initial;
+    }
+    .mobile-col-safe-f {
+        margin-top: initial;
+    }
+}
+
+.soulignement {
+    text-decoration: none;
+}
+
+.bouton {
+    background-color: black;
+    color: white;
+    border: black solid;
+    border-radius: 100px;
+    margin-left: 15.5%;
+    text-align: center;
+    width: 70%;
+    font-size: 70%;
+}
