@@ -10,7 +10,6 @@ use \Whoops\Handler\PrettyPageHandler;
 
 require 'app/Router.php';
 new App\Router;
-dump(RouterSingletons::AltoRouter());
 echo (
 "<script>console.log('Généré en '+(Date.now()-".($in*1000).")+'ms')</script>"
 

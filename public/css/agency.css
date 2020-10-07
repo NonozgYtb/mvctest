@@ -9426,7 +9426,7 @@ a.color-black:hover, a.color-black:focus {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("https://bunkerfinal.com/photos/index.jpg");
+  background-image: url("/img/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;

@@ -7,7 +7,7 @@
       <div class="intro-lead-in">BunkerFinal</div>
       <div class="intro-heading text-uppercase">UN SERVEUR EN DEV</div>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" download="blink.txt" href="#">Luncher</a>
-      <link rel="icon" type="image/png" href="img/logos/logo Dev'&'Cie.png">
+      <link rel="icon" type="image/png" href="/img/logos/logo Dev'&'Cie.png">
     </div>
   </div>
 </header>

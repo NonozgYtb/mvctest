@@ -71,7 +71,7 @@ class Router
             AppController::execute("", "ErrorController", "index");
         }
 
-        file_put_contents('config/RouterLog.txt', "\n" . $logs, FILE_APPEND);
+        file_put_contents(dirname(__DIR__) . DS . "config" . DS . "RouterLog.txt", "\n" . $logs, FILE_APPEND);
 
         return $this;
     }
