@@ -107,7 +107,7 @@
 </div>
 
 <!-- Contact -->
-<section class="page-section py-5" id="contact">
+<section class="page-section pt-5 pb-0 pb-md-5" id="contact">
   <div class="container">
     <div class="row m-0">
       <div class="col-lg-12 text-center">
