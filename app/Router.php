@@ -2,24 +2,22 @@
 
 namespace App;
 
-use NonozgYtb\AltoRouter;
 use \App\Controller\AppController;
 
 class Router
 {
 
     private $router;
-
-    public function __construct()
-    {
-
-        $this->router = new AltoRouter();
+  
+    public function __construct() {  
+        
+        $this->router = \App\Config\Singletons\RouterSingletons::AltoRouter();
 
         $this
             ->setRoutes()
             ->match();
-
         return $this;
+
     }
 
     private function setRoutes(): self
@@ -28,9 +26,7 @@ class Router
 
             // map homepage
             ->get('/', 'home:index', "index")
-
-            // map user details page
-            ->get('/user/[i:id]', "");
+            ->get('/news', 'home:news', "news");
 
         return $this;
     }
@@ -39,21 +35,32 @@ class Router
     {
 
         $match = $this->router->match();
-        /*if (!isset($match["target"])) {
-            $match["target"] = "error:index";
-            http_response_code(404);
-        }*/
+        $logs = "[" . date("Y/m/d : H:i:s (P)") . "]";
         if ($match && isset($match["target"]) && gettype($match["target"]) == "string" && !empty(trim($match["target"]))) {
             $ex = [];
             $matches = explode("/", $match["target"]);
             foreach ($matches as $key => $val) {
                 if (str_contains(":", $val) && $key < count($matches)) continue;
                 (!empty($val)) ? $ex[] = ucwords($val) : false;
-            }
+            };
             $ex2 = explode(":", $ex[count($ex) - 1]);
             unset($ex[count($ex) - 1]);
-            AppController::execute(implode(DIRECTORY_SEPARATOR, $ex), $ex2[0] . "Controller", $ex2[1]);
+            $logser = [implode(DIRECTORY_SEPARATOR, $ex), $ex2[0] . "Controller", $ex2[1]];
+            AppController::execute(...$logser);
+            $logs .= " " . $logser[0] . $logser[1] . " " . $logser[2] . "()";
+            if (!empty($match["get"])) {
+                $logs .= " /  " . json_encode($match["get"]);
+            }
         } else {
+            $logs .= " " . $_SERVER["REQUEST_URI"] . " ";
+            $dir = dirname(__DIR__) . DS . "public" . DS . str_replace("/", DS, $_SERVER["REQUEST_URI"]);
+            if ((int)strpos($dir, "favicon.ico") === 0) {
+                
+            } elseif (isset($match["target"])) {
+                $logs .= "Error: Undefined Controller or View";
+            } elseif (!file_exists($dir)) {
+                $logs .= "Error: No routes";
+            }
 
             // ! InDev :
             /*$variab = array_filter(explode("/",$match), fn($value) => !is_null($value) && $value !== '');
@@ -64,7 +71,8 @@ class Router
             AppController::execute("", "ErrorController", "index");
         }
 
+        file_put_contents('config/RouterLog.txt', "\n" . $logs, FILE_APPEND);
+
         return $this;
     }
 }
-return new Router();

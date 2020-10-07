@@ -1,6 +1,3 @@
-@import url("./src/customfont/customfont.css");
-@import url("./src/segoe-ui-font/style.css");
-@import url("./src/flag-font/css/flag-icon.css");
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 .display-4-copy {
     font-weight: 300;

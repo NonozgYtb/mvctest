@@ -1,10 +1,17 @@
 .carousel {
     background: #212529;
 
-    &-item img {
-        min-height: 300px;
-        transform: translateX(-25%);
-        -webkit-transform: translateX(-25%);
+    &-item img, &-item .img {
+        /*min-height: 300px;
+        max-height: 475px;
+        min-width: 100%;
+        object-fit: cover;
+        */
+    min-height: 300px;
+    height: auto;
+    max-height: 475px;
+    width: 100%;
+    object-fit: cover;
     }
 
     &-caption h5 {
@@ -60,3 +67,8 @@
 .max-h100 {
     max-height: 100%;
 }
+
+.progress-bar.disabled {
+    filter: opacity(0.5);
+}
+

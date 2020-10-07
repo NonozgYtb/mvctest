@@ -77,7 +77,7 @@ use App\Render; ?>
 
 <script src="js/jqBootstrapValidation.js"></script>
 
-<script src="js/agency.min.js"></script>
+<script src="js/agency.js"></script>
 
 <?= Render::getInstance()
   ->setHeadStr('<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">')

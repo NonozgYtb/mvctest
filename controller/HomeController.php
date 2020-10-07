@@ -18,6 +18,13 @@ class HomeController
         $this->render->loadView("try/home");
         return true;
     }
+
+    public function news()
+    {
+        $this->render->setHead("News", "title");
+        $this->render->loadView("try/news");
+        return true;
+    }
     
 }
 ?>

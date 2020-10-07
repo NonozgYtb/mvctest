@@ -13,7 +13,7 @@
 </header>
 
 <!-- Trailer -->
-<section class="bg-gray-300 page-section pt-5 pb-5" id="services">
+<section class="bg-gray-300 page-section py-5" id="services">
   <div class="container max-w0 m-0">
     <div class="row max-w0 m-0">
       <div class="col-lg-12 text-center">
@@ -28,7 +28,7 @@
 </section>
 
 <!-- Services -->
-<section class="bg-secondary color-white page-section pt-5" id="services">
+<section class="bg-secondary color-white page-section py-5" id="services">
   <div class="container">
     <div class="row m-0">
       <div class="col-lg-12 text-center">
@@ -107,7 +107,7 @@
 </div>
 
 <!-- Contact -->
-<section class="page-section" id="contact">
+<section class="page-section py-5" id="contact">
   <div class="container">
     <div class="row m-0">
       <div class="col-lg-12 text-center">

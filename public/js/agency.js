@@ -4,13 +4,17 @@
   var carousel = $(carouselId)
   if (carousel != undefined) {
     carousel.carousel({
-      interval: 400,
+      interval: 900000,
       keyboard: false,
     });
   };
 
+  $('[data-bg-url]').each((i,el) => {
+    el.style.backgroundImage = "url('"+el.dataset["bgUrl"]+"')"
+  })
+
   carousel.on('slide.bs.carousel', function (e) {
-    $(carouselId+' .carousel-progress-bar')[0].style.width = (100 / (e.isTrigger - 1) * e.to) + "%";
+    $(carouselId + ' .carousel-progress-bar')[0].style.width = (100 / (e.isTrigger - 1) * e.to) + "%";
 
   })
   // Smooth scrolling using jQuery easing
