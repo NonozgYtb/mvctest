@@ -11,8 +11,12 @@ use App\Render; ?>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="/">Accueil</a>
-        </li><li class="nav-item dropdown">
+          <a class="nav-link js-scroll-trigger" href="<?=\App\Config\Singletons\RouterSingletons::AltoRouter()->generate("index")?>">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="<?=\App\Config\Singletons\RouterSingletons::AltoRouter()->generate("news")?>">news</a>
+        </li>
+        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a>

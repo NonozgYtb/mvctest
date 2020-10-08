@@ -8,16 +8,16 @@ class Router
 {
 
     private $router;
-  
-    public function __construct() {  
-        
+
+    public function __construct()
+    {
+
         $this->router = \App\Config\Singletons\RouterSingletons::AltoRouter();
 
         $this
             ->setRoutes()
             ->match();
         return $this;
-
     }
 
     private function setRoutes(): self
@@ -25,8 +25,8 @@ class Router
         $this->router
 
             // map homepage
-            ->get('/', 'home:index', "index")
-            ->get('/news', 'home:news', "news");
+            ->map('GET', '/', 'home:index', "index")
+            ->map('GET', '/news', 'home:news', "news");
 
         return $this;
     }
@@ -55,7 +55,6 @@ class Router
             $logs .= " " . $_SERVER["REQUEST_URI"] . " ";
             $dir = dirname(__DIR__) . DS . "public" . DS . str_replace("/", DS, $_SERVER["REQUEST_URI"]);
             if ((int)strpos($dir, "favicon.ico") === 0) {
-                
             } elseif (isset($match["target"])) {
                 $logs .= "Error: Undefined Controller or View";
             } elseif (!file_exists($dir)) {
