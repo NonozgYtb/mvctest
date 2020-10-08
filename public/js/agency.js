@@ -9,8 +9,8 @@
     });
   };
 
-  $('[data-bg-url]').each((i,el) => {
-    el.style.backgroundImage = "url('"+el.dataset["bgUrl"]+"')"
+  $('[data-bg-url]').each((i, el) => {
+    el.style.backgroundImage = "url('" + el.dataset["bgUrl"] + "')"
   })
 
   carousel.on('slide.bs.carousel', function (e) {
@@ -50,9 +50,12 @@
       $("#mainNav").removeClass("navbar-shrink");
     }
   };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
+
+  if (document.getElementsByTagName("body")[0].classList.contains("nav-collapse")) {
+    // Collapse now if page is not at top
+    navbarCollapse();
+    // Collapse the navbar when page is scrolled
+    $(window).scroll(navbarCollapse);
+  }
 
 })(jQuery); // End of use strict

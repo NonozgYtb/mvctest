@@ -1,17 +1,12 @@
 .carousel {
     background: #212529;
 
-    &-item img, &-item .img {
-        /*min-height: 300px;
+    &-item img {
+        min-height: 300px;
+        height: auto;
         max-height: 475px;
-        min-width: 100%;
+        width: 100%;
         object-fit: cover;
-        */
-    min-height: 300px;
-    height: auto;
-    max-height: 475px;
-    width: 100%;
-    object-fit: cover;
     }
 
     &-caption h5 {
@@ -43,32 +38,60 @@
         transition: 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
     }
 }
-.min-w0 {
-    min-width: unset;
+
+.new-header {
+    padding: 3rem;
+    & > .row {
+        margin-top: 150px;
+    }
 }
-.min-w100 {
-    min-width: 100%;
+
+@include media-breakpoint-down(sm) {
+    .new-header {
+        padding: 2rem;
+    }
 }
-.min-h0 {
-    min-height: unset;
+
+@include media-breakpoint-down(xs) {
+    .new-header {
+        padding: 1rem;
+    }
 }
-.min-h100 {
-    min-height: 100%;
+
+@include media-breakpoint-up(sm) {
+    .new-header > .row {
+        margin-top: 150px;
+    }
 }
-.max-w0 {
-    max-width: unset;
+
+@include media-breakpoint-up(md) {
+    .new-header > .row {
+        margin-top: 200px;
+    }
 }
-.max-w100 {
-    max-width: 100%;
+
+@include media-breakpoint-up(lg) {
+    .new-header > .row {
+        margin-top: 300px;
+    }
 }
-.max-h0 {
-    max-height: unset;
+
+.bg-sizer {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.max-h100 {
-    max-height: 100%;
+
+@each $a1 in ("min-", "max-") {
+    @each $a2 in ("w", "h") {
+        @each $a3, $a4 in ("0": unset, "100": 100%) {
+            .#{$a1}#{$a2}#{$a3} {
+                #{$a1}width: $a4;
+            }
+        }
+    }
 }
 
 .progress-bar.disabled {
     filter: opacity(0.5);
 }
-

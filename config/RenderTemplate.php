@@ -9,26 +9,7 @@ class RenderTemplate
     public static function render($body)
     {
         $RenderAPI = Render::getInstance();
-        ob_start();
-
-        /*<!--<!DOCTYPE html>
-            <html lang="fr">
-            <head>
-                <meta charset="UTF-8">
-                <meta http-equiv="Content-Type" content="text/html">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title><?= $RenderAPI->getHead()["title"] ?? "" ?></title>
-                <meta name="author" content="<?= $RenderAPI->getHead()["author"] ?? "NonozgYtb" ?>">
-                <meta name="language" content="fr">
-                <meta http-equiv="Content-Language" content="fr">
-                <meta name="description" content="<?= $RenderAPI->getHead()["description"] ?? "" ?>">
-                <?= static::getHeadStr() ?>
-            </head>
-            <body>
-                <?= $body ?? "" ?>
-                <a><?= $RenderAPI->getBody()["keyys"] ?? "" ?></a>
-            </body>
-            </html>-->*/ ?>
+        ob_start();?>
 
         <!DOCTYPE html>
         <html lang="fr">
@@ -47,7 +28,7 @@ class RenderTemplate
             <?= static::getHeadStr() ?>
         </head>
 
-        <body>
+        <body class="<?= $RenderAPI->getHead()["bodyC1"] ?? "" ?>">
             <?= $body ?? "" ?>
         </body>
 

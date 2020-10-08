@@ -55,7 +55,7 @@ class Render
         return $this;
     }
 
-    public function setHead($value, $key = null)
+    public function setHead($value, $key)
     {
         if (empty($key) || empty($value)) throw new RenderingException("SetHead's variables is not defined.", 110);
         $this->global["head"][$key] = $value;
@@ -68,7 +68,7 @@ class Render
         $this->global["str"][$key] = $value;
         return $this;
     }
-    public function setBody($value, $key = null)
+    public function setBody($value, $key)
     {
         if (empty($key) || empty($value)) throw new RenderingException("SetBody's variables is not defined.", 112);
         $this->global["body"][$key] = $value;
@@ -78,7 +78,8 @@ class Render
     public function render()
     {
         $this->getRequireResult("./view/".Str::strUrlUc($this->view)."View.php", "content");
-        $templateUrl = "./template/".Str::strUrlUc($this->template)."Template.php";
+        (!empty($this->template)) ? $templateName = $this->template : $templateName = "blank";
+        $templateUrl = "./template/".(Str::strUrlUc($templateName)??"hhii")."Template.php";
         $template = $this->getRequireResult($templateUrl, "s4uP257fDq8BayrdQCm9FkMIozYEZGWphxlnRSvtAw6ib0jNgJ");
         Indenter::Indenter()->indent(RenderTemplate::render($template), true);
         
