@@ -100,4 +100,9 @@ $theme-colors: map-merge(
     $theme-colors
 );
 
+$theme-colors: map-merge($colors, $theme-colors);
 $theme-colors: map-merge($grays-prefix, $theme-colors);
+
+@each $k,$v in $theme-colors {
+    $theme-colors: map-merge(("light-#{$k}": lighten($v, 10%)), $theme-colors);
+}

@@ -15,14 +15,21 @@ class HomeController
     public function index()
     {
         $this->render->setHead("Accueil", "title");
-        $this->render->loadView("try/home");
+        $this->render->loadView("home");
         return true;
     }
 
     public function news()
     {
         $this->render->setHead("News", "title");
-        $this->render->loadView("try/news");
+        $this->render->loadView("news");
+        return true;
+    }
+
+    public function partners()
+    {
+        $this->render->setHead("Partenaires", "title");
+        $this->render->loadView("partners");
         return true;
     }
     

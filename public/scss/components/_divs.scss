@@ -1,0 +1,236 @@
+/**
+!========================================
+*                Divs.
+!========================================
+*/
+
+.p-marg-top {
+    margin-bottom: 1rem;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: initial;
+}
+
+@media (max-width:350px) {
+    .xxs-hide {
+        display: none !important;
+    }
+
+    .xxs-show {
+        display: initial;
+    }
+}
+
+@media (max-width:576px) {
+    .xs-hide {
+        display: none !important;
+    }
+
+    .xs-show {
+        display: initial;
+    }
+}
+
+@media (min-width:576px) {
+    .sm-hide {
+        display: none !important;
+    }
+
+    .sm-show {
+        display: initial;
+    }
+}
+
+@media (min-width:768px) {
+    .md-hide {
+        display: none !important;
+    }
+
+    .md-show {
+        display: initial;
+    }
+}
+
+@media (min-width:992px) {
+    .lg-hide {
+        display: none !important;
+    }
+
+    .lg-show {
+        display: initial;
+    }
+}
+
+@media (min-width:1200px) {
+    .xl-hide {
+        display: none !important;
+    }
+
+    .xl-show {
+        display: initial;
+    }
+}
+
+/**
+!========================================
+*                 Space
+!========================================
+*/
+
+.no-marg-pad {
+    margin: 0;
+    padding: 0;
+}
+
+.marg-left-0-5em {
+    margin-left: 0.5em;
+}
+
+
+.min-sm-marg-top-0-5em {
+    margin-top: 0.5em;
+}
+
+.pad-top-30 {
+    padding-top: 30px !important;
+}
+
+
+/**
+!========================================
+*                 Order
+!========================================
+*/
+
+$griders: () !default;
+$griders: map-merge(("sm" : 540,
+        "md" : 769,
+        "lg" : 960,
+        "xl" : 1140,
+    ),
+    $griders);
+
+$sides: () !default;
+$sides: map-merge((
+        "t" : "top",
+        "l" : "left",
+        "b" : "bottom",
+        "r" : "right",
+    ),
+    $sides);
+
+@for $i from 1 through 25 {
+    .order-g-#{$i} {
+        order: $i;
+    }
+}
+
+
+
+@each $name,
+$size in $griders {
+
+    @each $a,
+    $b in $sides {
+        .pad-#{$b}-0 {
+            padding#{$b}: 0;
+        }
+    }
+
+
+    @media screen and (min-width: #{$size}px) {
+
+        @each $a,
+        $b in $sides {
+            .pad-#{$name}-#{$b}-0 {
+                padding#{$b}: 0;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: #{$size}px) {
+
+        @each $a,
+        $b in $sides {
+            .pad-min-#{$name}-#{$b}-0 {
+                padding-#{$b}: 0;
+            }
+        }
+    }
+}
+
+
+
+
+@each $name,
+$size in $griders {
+    @media screen and (min-width: #{$size}px) {
+        @for $i from 1 through 25 {
+            .order-#{$name}-#{$i} {
+                order: $i;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: #{$size}px) {
+        @for $i from 1 through 25 {
+            .order-min-#{$name}-#{$i} {
+                order: $i;
+            }
+        }
+    }
+}
+
+
+@for $sub from 1 through 20 {
+    @for $med from 1 through 20 {
+        .col-#{$med}-#{$sub} {
+            flex: 0 0 #{$med/$sub * 100%};
+            max-width: #{$med/$sub * 100%};
+        }
+    }
+}
+
+@each $name,
+$size in $griders {
+    @media screen and (min-width: #{$size}px) {
+        @for $sub from 1 through 20 {
+            @for $med from 1 through 20 {
+                .col-#{$name}-#{$med}-#{$sub} {
+                    flex: 0 0 #{$med/$sub * 100%};
+                    max-width: #{$med/$sub * 100%};
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: #{$size}px) {
+        @for $sub from 1 through 20 {
+            @for $med from 1 through 20 {
+                .col-min-#{$name}-#{$med}-#{$sub} {
+                    flex: 0 0 #{$med/$sub * 100%};
+                    max-width: #{$med/$sub * 100%};
+                }
+            }
+        }
+    }
+}
+
+@function multiply($a, $b) {
+    @return $a * $b;
+}
+
+@function div($a, $b) {
+    @return $a / $b;
+}
+
+.table-responsive {
+    display: table;
+}

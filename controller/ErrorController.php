@@ -14,7 +14,7 @@ class ErrorController
 
     public function index()
     {
-        $this->render->loadView("try/error");
+        $this->render->loadView("error");
         $this->render->setHead("Erreur 404", "title");
         return true;
     }

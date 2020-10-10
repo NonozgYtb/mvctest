@@ -26,7 +26,8 @@ class Router
 
             // map homepage
             ->map('GET', '/', 'home:index', "index")
-            ->map('GET', '/news', 'home:news', "news");
+            ->map('GET', '/news', 'home:news', "news")
+            ->map('GET', '/partners', 'home:partners', 'partners');
 
         return $this;
     }
@@ -35,7 +36,15 @@ class Router
     {
 
         $match = $this->router->match();
-        $logs = "[" . date("Y/m/d : H:i:s (P)") . "]";
+        $ip = "";
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        $logs = "[" . date("Y/m/d : H:i:s (P)") . "] ".$ip." ";
         if ($match && isset($match["target"]) && gettype($match["target"]) == "string" && !empty(trim($match["target"]))) {
             $ex = [];
             $matches = explode("/", $match["target"]);
