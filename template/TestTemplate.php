@@ -1,7 +1,7 @@
 <?php
 
 use App\Render; ?>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark <?=(isset(Render::getInstance()->getBody()["stiky-nav"]) && Render::getInstance()->getBody()["stiky-nav"] == true) ? "nav" : "fixed"?>-top navbar-shrink" id="mainNav">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="fas fa-radiation" style="padding-right: 10px"></span>BunkerFinal</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,9 +14,19 @@ use App\Render; ?>
           <a class="nav-link js-scroll-trigger" href="<?=\App\Config\Singletons\RouterSingletons::AltoRouter()->generate("index")?>">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="<?=\App\Config\Singletons\RouterSingletons::AltoRouter()->generate("news")?>">news</a>
+          <a class="nav-link js-scroll-trigger" href="<?=\App\Config\Singletons\RouterSingletons::AltoRouter()->generate("news")?>">News</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="<?=\App\Config\Singletons\RouterSingletons::AltoRouter()->generate("partners")?>">Partenaires</a>
+        </li>
+        <li class="nav-item mx-auto mr-lg-0 ml-lg-4">
+          <a style="font-size: 0.8em;" class="btn btn-primary rounded-pill btn-md text-uppercase js-scroll-trigger color-black">Se Connecter</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<?php /*<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a>
@@ -26,14 +36,8 @@ use App\Render; ?>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li>
-        <li class="nav-item mx-auto mr-lg-0 ml-lg-4">
-          <a style="font-size: 0.8em;" class="btn btn-primary rounded-pill btn-md text-uppercase js-scroll-trigger color-black">Se Connecter</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      </li>*/?>
+
 <?= Render::getInstance()->getContent() ?>
 
 <footer class="bg-secondary color-white footer">

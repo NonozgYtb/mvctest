@@ -13,7 +13,6 @@ $gray-900: #212529;
 $black: #000000;
 
 $grays: ();
-// stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(
     (
         "000": $black,
@@ -52,7 +51,6 @@ $grays-prefix: ();
 }
 
 $colors: ();
-// stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
     (
         "blue": $blue,
@@ -83,7 +81,6 @@ $light: $gray-100;
 $dark: $gray-800;
 
 $theme-colors: ();
-// stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
     (
         "primary": $primary,
@@ -106,3 +103,14 @@ $theme-colors: map-merge($grays-prefix, $theme-colors);
 @each $k,$v in $theme-colors {
     $theme-colors: map-merge(("light-#{$k}": lighten($v, 10%)), $theme-colors);
 }
+
+$custom-colors: ();
+$custom-colors: map-merge(
+    (
+        "discord": #7289DA,
+    ),
+    $custom-colors
+);
+
+
+$theme-colors: map-merge($theme-colors, $custom-colors);

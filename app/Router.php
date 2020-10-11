@@ -27,7 +27,8 @@ class Router
             // map homepage
             ->map('GET', '/', 'home:index', "index")
             ->map('GET', '/news', 'home:news', "news")
-            ->map('GET', '/partners', 'home:partners', 'partners');
+            ->map('GET', '/partners', 'home:partners', 'partners')
+            ->map('GET', '/history', 'home:history', 'history');
 
         return $this;
     }
@@ -78,8 +79,11 @@ class Router
             http_response_code(404);
             AppController::execute("", "ErrorController", "index");
         }
-
-        file_put_contents(dirname(__DIR__) . DS . "config" . DS . "RouterLog.txt", "\n" . $logs, FILE_APPEND);
+        try {
+            file_put_contents(dirname(__DIR__) . DS . "config" . DS . "RouterLog.txt", "\n" . $logs, FILE_APPEND);
+        } catch (\Throwable $e) {
+            
+        }
 
         return $this;
     }

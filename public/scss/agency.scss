@@ -6,10 +6,10 @@
 @import "base/page.scss";
 
 @import "bootstrap/bootstrap.scss";
-
 @import "layout/functions.scss";
 // Components
 @import "components/buttons.scss";
+@import "components/divs.scss";
 @import "components/navbar.scss";
 
 // Layout
@@ -20,3 +20,4 @@
 @import "layout/team.scss";
 @import "layout/contact.scss";
 @import "layout/footer.scss";
+@import "layout/old_custom.scss";

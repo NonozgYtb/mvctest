@@ -32,6 +32,13 @@ class HomeController
         $this->render->loadView("partners");
         return true;
     }
+
+    public function history()
+    {
+        $this->render->setHead("Histoire", "title");
+        $this->render->loadView("history");
+        return true;
+    }
     
 }
 ?>

@@ -1,5 +1,6 @@
 (function ($) {
   "use strict"; // Start of use strict
+
   var carouselId = '#homeCarousel';
   var carousel = $(carouselId)
   if (carousel != undefined) {
@@ -8,6 +9,15 @@
       keyboard: false,
     });
   };
+
+  if (document.body.scrollHeight < window.outerHeight) {
+    var stylerOfFooter = document.getElementsByTagName("footer")[0].style
+    stylerOfFooter.position = "absolute";
+    stylerOfFooter.bottom = 0
+    stylerOfFooter.left = 0
+    stylerOfFooter.right = 0
+
+  }
 
   $('[data-bg-url]').each((i, el) => {
     el.style.backgroundImage = "url('" + el.dataset["bgUrl"] + "')"
