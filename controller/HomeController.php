@@ -40,5 +40,12 @@ class HomeController
         return true;
     }
     
+    public function login()
+    {
+        $this->render->setHead("Connexion", "title");
+        $this->render->loadView("login2");
+        return true;
+    }
+    
 }
 ?>

@@ -1,4 +1,4 @@
-<?= \App\Render::getInstance()->setTemplate("test"); \App\Render::getInstance()->setHead("nav-collapse", "bodyC1")?>
+<?= \App\Render::getInstance()->setTemplate("test")->setHead("nav-collapse", "bodyC1")?>
 
 <!-- Header -->
 <header class="masthead">

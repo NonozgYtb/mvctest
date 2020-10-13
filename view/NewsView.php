@@ -1,5 +1,4 @@
-<?= \App\Render::getInstance()->setTemplate("test");
-\App\Render::getInstance()->setHead("nav-collapse", "bodyC1") ?>
+<?= \App\Render::getInstance()->setTemplate("test")->setHead("nav-collapse", "bodyC1") ?>
 
 <?php
 $progress = [
@@ -42,33 +41,39 @@ $progress = [
             </div>
             <div class="col-12 m-0 pt-3 pt-md-0 col-md-4 col-xl-3">
                 <ul class="list-group list-group-flush spearater-white ul-transparent">
-                    <li class="list-group-item li-header">
-                        <span>v1.1.2</span>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="" class="color-white">Texte 1</a>
-                    </li>
-                    <li class="list-group-item spacism">
-                        <a href="" class="color-white">Repudiandae delectus libero</a>
-                    </li>
-                    <li class="list-group-item li-header">
-                        <span>v1.1.1</span>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="" class="color-white">nesciunt adipisci illo, iste</a>
-                    </li>
-                    <li class="list-group-item spacism">
-                        <a href="" class="color-white">Lorem ipsum</a>
-                    </li>
-                    <li class="list-group-item li-header">
-                        <span>v0.2.1_beta</span>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="" class="color-white">Adipisicing</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="" class="color-white">dolor deserunt</a>
-                    </li>
+                    <div class="spacism">
+                        <li class="list-group-item li-header">
+                            <span>v1.1.2</span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="" class="color-white">Texte 1</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="" class="color-white">Repudiandae delectus libero</a>
+                        </li>
+                    </div>
+                    <div class="spacism">
+                        <li class="list-group-item li-header">
+                            <span>v1.1.1</span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="" class="color-white">nesciunt adipisci illo, iste</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="" class="color-white">Lorem ipsum</a>
+                        </li>
+                    </div>
+                    <div>
+                        <li class="list-group-item li-header">
+                            <span>v0.2.1_beta</span>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="" class="color-white">Adipisicing</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="" class="color-white">dolor deserunt</a>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>

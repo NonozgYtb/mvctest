@@ -1,7 +1,9 @@
 <?php
 
-use App\Render; ?>
-<nav class="navbar navbar-expand-lg navbar-dark <?=(isset(Render::getInstance()->getBody()["stiky-nav"]) && Render::getInstance()->getBody()["stiky-nav"] == true) ? "nav" : "fixed"?>-top navbar-shrink" id="mainNav">
+use App\Render;
+use App\Config\Singletons\RouterSingletons;
+$body = Render::getInstance()->getBody(); ?>
+<nav class="navbar navbar-expand-lg navbar-dark <?= (isset($body["stiky-nav"]) && $body["stiky-nav"] == true) ? "nav" : "fixed" ?>-top navbar-shrink" id="mainNav">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="fas fa-radiation" style="padding-right: 10px"></span>BunkerFinal</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,17 +12,15 @@ use App\Render; ?>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="<?=\App\Config\Singletons\RouterSingletons::AltoRouter()->generate("index")?>">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="<?=\App\Config\Singletons\RouterSingletons::AltoRouter()->generate("news")?>">News</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="<?=\App\Config\Singletons\RouterSingletons::AltoRouter()->generate("partners")?>">Partenaires</a>
-        </li>
+        <?php
+        $arr = ["index" => "Accueil", "news" => "News", "partners" => "Partenaires", "history" => "Histoire"];
+        foreach ($arr as $name => $str) : ?>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger<?= (Render::getInstance()->getHead()["pagename"] == $name) ? " active" : "" ?>" href="<?= RouterSingletons::AltoRouter()->generate($name) ?>"><?= $str ?></a>
+          </li>
+        <?php endforeach; ?>
         <li class="nav-item mx-auto mr-lg-0 ml-lg-4">
-          <a style="font-size: 0.8em;" class="btn btn-primary rounded-pill btn-md text-uppercase js-scroll-trigger color-black">Se Connecter</a>
+          <a style="font-size: 0.8em;" href="#" class="btn btn-primary rounded-pill btn-md text-uppercase js-scroll-trigger color-black">Se Connecter</a>
         </li>
       </ul>
     </div>
@@ -36,13 +36,13 @@ use App\Render; ?>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li>*/?>
+      </li>*/ ?>
 
 <?= Render::getInstance()->getContent() ?>
 
 <footer class="bg-secondary color-white footer">
   <div class="container">
-    <div class="row align-items-center mobile-col-safe font-weight-bold">
+    <div class="row align-items-center font-weight-bold m-0">
       <div class="col-md-4">
         <span class="copyright">Copyright </span><i class="fas fa-copyright"></i><span class="copyright"> BunkerFinal 2020 </div>
       <div class="col-md-4">
@@ -95,4 +95,4 @@ use App\Render; ?>
   ->setHeadStr('<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">')
   ->setHeadStr('<link href="css/agency.css" rel="stylesheet">')
   ->setHeadStr('<link rel="stylesheet" href="css/custom.css">')
-  ->setHeadStr('<link rel="icon" href="/icon/favicon.jpg" sizes="240x240">')?>
+  ->setHeadStr('<link rel="icon" href="/icon/favicon.jpg" sizes="240x240">') ?>

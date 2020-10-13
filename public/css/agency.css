@@ -14390,6 +14390,9 @@ ul.list-group.ayer a.list-group-item {
   color: #ffffff47;
   margin-bottom: -5px; }
 
+.list-group-flush .list-group-item:last-child {
+  border-bottom: unset; }
+
 ul.list-group .list-group-item {
   padding: 0.5rem 0.75rem; }
 

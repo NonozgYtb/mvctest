@@ -19,9 +19,18 @@ class AppController
         }
     }
 
+    public static function redirect($url)
+    {
+        header("Location: " . $url);
+        exit;
+    }
+
     public static function execute($url, $controllerStr, $action)
     {
         $returned = static::importController($url, $controllerStr, $action);
+        if ($returned === false) {
+            AppController::execute("", "ErrorController", "index");
+        }
         if ($returned !== "no-view")
             Render::Instance()->render();
     }

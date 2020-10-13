@@ -17,6 +17,7 @@ class Router
         $this
             ->setRoutes()
             ->match();
+        
         return $this;
     }
 
@@ -28,14 +29,16 @@ class Router
             ->map('GET', '/', 'home:index', "index")
             ->map('GET', '/news', 'home:news', "news")
             ->map('GET', '/partners', 'home:partners', 'partners')
-            ->map('GET', '/history', 'home:history', 'history');
+            ->map('GET', '/history', 'home:history', 'history')
+            ->map('GET', '/login', 'login:login', 'login')
+            ->map('GET', '/logger', 'login:login', 'login2')
+            ->map('POST', '/logger', 'login:loginPost', 'logger');
 
         return $this;
     }
 
     private function match(): self
     {
-
         $match = $this->router->match();
         $ip = "";
         if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
@@ -56,6 +59,7 @@ class Router
             $ex2 = explode(":", $ex[count($ex) - 1]);
             unset($ex[count($ex) - 1]);
             $logser = [implode(DIRECTORY_SEPARATOR, $ex), $ex2[0] . "Controller", $ex2[1]];
+            Render::getInstance()->setHead($match['name'], "pagename");
             AppController::execute(...$logser);
             $logs .= " " . $logser[0] . $logser[1] . " " . $logser[2] . "()";
             if (!empty($match["get"])) {
