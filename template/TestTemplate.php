@@ -20,7 +20,7 @@ $body = Render::getInstance()->getBody(); ?>
           </li>
         <?php endforeach; ?>
         <li class="nav-item mx-auto mr-lg-0 ml-lg-4">
-          <a style="font-size: 0.8em;" href="#" class="btn btn-primary rounded-pill btn-md text-uppercase js-scroll-trigger color-black">Se Connecter</a>
+          <a style="font-size: 0.8em;" href="<?= RouterSingletons::AltoRouter()->generate("login") ?>" class="btn btn-primary rounded-pill btn-md text-uppercase js-scroll-trigger color-black">Se Connecter</a>
         </li>
       </ul>
     </div>
