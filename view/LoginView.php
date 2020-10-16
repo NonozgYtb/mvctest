@@ -1,18 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="fas fa-radiation" style="padding-right: 10px"></span>BunkerFinal</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu <i class="fas fa-bars"></i> </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto">
-                <li class="nav-item"> <a class="nav-link js-scroll-trigger active" href="/">Accueil</a> </li>
-                <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="/news">News</a> </li>
-                <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="/partners">Partenaires</a> </li>
-                <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="/history">Histoire</a> </li>
-                <li class="nav-item mx-auto mr-lg-0 ml-lg-4"> <a style="font-size: 0.8em;" href="#" class="btn btn-primary rounded-pill btn-md text-uppercase js-scroll-trigger color-black">Se Connecter</a> </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<?= \App\Render::getInstance()->setTemplate("test")->setBody(true, "no-footer") ?>
 <form action="<?= App\Config\Singletons\RouterSingletons::AltoRouter()->generate("logger")?>" class="form-signin" method="POST">
     <h1 class="h3 mb-3 font-weight-normal">
         Connexion
@@ -28,8 +14,12 @@
         </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+    <a id="return-back" class="mt-5 mb-3 text-muted">Retour sur la dernière page</a>
 </form>
+
+<script>
+  $("#return-back")[0].href = document.referrer;
+</script>
 
 <style>
     html,

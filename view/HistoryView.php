@@ -97,7 +97,7 @@
         <div class="row m-0">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">
-                    Workers
+                    Miliciens
                 </h2>
             </div>
             <div class="col-12">

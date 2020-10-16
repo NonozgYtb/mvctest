@@ -10,7 +10,7 @@
     });
   };
 
-  if (document.body.scrollHeight < window.outerHeight) {
+  if (document.body.scrollHeight < window.outerHeight && document.getElementsByTagName("footer")[0] != undefined) {
     var stylerOfFooter = document.getElementsByTagName("footer")[0].style
     stylerOfFooter.position = "absolute";
     stylerOfFooter.bottom = 0

@@ -39,7 +39,8 @@ $body = Render::getInstance()->getBody(); ?>
       </li>*/ ?>
 
 <?= Render::getInstance()->getContent() ?>
-
+<?php if(!isset($body["no-footer"]) || $body["no-footer"] !== true):
+  ?>
 <footer class="bg-secondary color-white footer">
   <div class="container">
     <div class="row align-items-center font-weight-bold m-0">
@@ -77,6 +78,7 @@ $body = Render::getInstance()->getBody(); ?>
     </div>
   </div>
 </footer>
+<?php endif;?>
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -94,5 +96,4 @@ $body = Render::getInstance()->getBody(); ?>
   ->setHeadStr('<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">')
   ->setHeadStr('<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">')
   ->setHeadStr('<link href="css/agency.css" rel="stylesheet">')
-  ->setHeadStr('<link rel="stylesheet" href="css/custom.css">')
   ->setHeadStr('<link rel="icon" href="/icon/favicon.jpg" sizes="240x240">') ?>
