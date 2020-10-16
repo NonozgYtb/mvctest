@@ -3,18 +3,18 @@
     <h1 class="h3 mb-3 font-weight-normal">
         Connexion
     </h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required="">
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required="">
+    <label for="mail" class="sr-only">Email address</label>
+    <input type="email" name="mail" id="mail" class="form-control" placeholder="Email address" required="">
+    <label for="pswd" class="sr-only">Password</label>
+    <input type="password" name="pswd" id="pswd" class="form-control" placeholder="Password" required="">
     <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me">
+        <label class="m-0">
+            <input type="checkbox" name="remember-me" value="true">
             Remember me
         </label>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    <a id="return-back" class="mt-5 mb-3 text-muted">Retour sur la dernière page</a>
+    <a id="return-back" class="d-inline-block mt-2 text-muted">Retour sur la dernière page</a>
 </form>
 
 <script>
