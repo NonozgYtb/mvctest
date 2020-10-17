@@ -26,10 +26,10 @@ class HomeController
         return true;
     }
 
-    public function partners()
+    public function staff()
     {
-        $this->render->setHead("Partenaires", "title");
-        $this->render->loadView("partners");
+        $this->render->setHead("Équipe", "title");
+        $this->render->loadView("staff");
         return true;
     }
 
@@ -43,7 +43,7 @@ class HomeController
     public function login()
     {
         $this->render->setHead("Connexion", "title");
-        $this->render->loadView("login2");
+        $this->render->loadView("login");
         return true;
     }
     

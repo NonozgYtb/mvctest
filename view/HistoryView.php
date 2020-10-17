@@ -9,8 +9,7 @@
     </div>
 </section>
 
-<!-- Services -->
-<section class="bg-secondary color-white page-section py-5" id="services">
+<section class="bg-secondary color-white page-section py-5" id="history">
     <div class="container">
         <div class="row m-0">
             <div class="col-12">
@@ -32,9 +31,9 @@
                         Pendant plusieurs années, les résidents des abris sont restés confinés dans leurs forteresses de luxe, mais les ressources commençaient à s'épuiser. Néanmoins, dehors, les radiations se dissipèrent peu à peu. Nous sommes en l'an 2027, la plupart des abris ont ouvert leurs portes, et le monde est désormais dominé par de nouvelles puissances : <br>
                     </p>
                     <ul class="my-3 list-group list-group-flush bg-secondary">
-                        <li class="list-group-item bg-secondary spacism">- <span class="font-weight-bold color-red">Les Workers,</span> la faction la plus crainte de tous</li>
-                        <li class="list-group-item bg-secondary spacism">- <span class="font-weight-bold color-green">Les Miliciens,</span> les anges de ce monde absurde</li>
-                        <li class="list-group-item bg-secondary spacism">- <span class="font-weight-bold color-blue">La Confrérie,</span> un groupe missionnaire dans les terres désolées dont les habitants restent septiques</li>
+                        <li class="list-group-item bg-secondary spacism">- <a href="#faction1" class="font-weight-bold color-red">Les Workers,</a> la faction la plus crainte de tous</li>
+                        <li class="list-group-item bg-secondary spacism">- <a href="#faction2" class="font-weight-bold color-green">Les Miliciens,</a> les anges de ce monde absurde</li>
+                        <li class="list-group-item bg-secondary spacism">- <a href="#faction3" class="font-weight-bold color-blue">La Confrérie,</a> un groupe missionnaire dans les terres désolées dont les habitants restent septiques</li>
                     </ul>
                     <p>
                         Vous incarnez un résident d'abri, l'un des derniers encore opérationnel. Un beau matin, le superviseur vient vous confier une mission de haute importance : votre abri a reçu un signal de détresse provenant de l'extérieur. Et celui-ci, coupé de tout contact, ne sait pas qu'il reste des survivants dehors. C'est pour cela que vous devrez trouver la personne à l'origine de ce signal, afin d’en apprendre un maximum sur le monde qui vous entoure.
@@ -45,11 +44,11 @@
     </div>
 </section>
 
-<section class="bg-secondary color-white page-section py-4" style="border-top: 5px #dc3545 solid;" id="services">
+<section class="bg-secondary color-white page-section py-4" style="border-top: 2px #dc3545 solid;" id="faction1">
     <div class="container">
         <div class="row m-0">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">
+                <h2 class="section-heading text-uppercase spacism">
                     Workers
                 </h2>
             </div>
@@ -92,11 +91,11 @@
     </div>
 </section>
 
-<section class="bg-secondary color-white page-section py-4" style="border-top: 5px #34ce57 solid;" id="services">
+<section class="bg-secondary color-white page-section py-4" style="border-top: 2px #34ce57 solid;" id="faction2">
     <div class="container">
         <div class="row m-0">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">
+                <h2 class="section-heading text-uppercase spacism">
                     Miliciens
                 </h2>
             </div>
@@ -109,11 +108,11 @@
     </div>
 </section>
 
-<section class="bg-secondary color-white page-section py-4" style="border-top: 5px #17a2b8 solid;" id="services">
+<section class="bg-secondary color-white page-section py-4" style="border-top: 2px #17a2b8 solid;" id="faction3">
     <div class="container">
         <div class="row m-0">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">
+                <h2 class="section-heading text-uppercase spacism">
                     Confreres
                 </h2>
             </div>
@@ -126,3 +125,16 @@
         </div>
     </div>
 </section>
+
+<script>
+    array = $("#history a[href^='#']");
+    array.on('click', function() {
+        var page = $(this).attr('href'); // Page cible
+        var speed = 750; // Durée de l'animation (en ms)
+        var toper = $(page).offset().top - $("nav")[0].offsetHeight + 5;
+        $('html, body').animate({
+            scrollTop: toper
+        }, speed);
+        return false;
+    });
+</script>

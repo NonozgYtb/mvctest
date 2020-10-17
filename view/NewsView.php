@@ -20,8 +20,7 @@ $progress = [
     </div>
 </section>
 
-<!-- Services -->
-<section class="bg-secondary color-white page-section py-5" id="services">
+<section class="bg-secondary color-white page-section py-5" id="news">
     <div class="container">
         <div class="row m-0">
             <div class="col-12 col-md-8 col-xl-9">

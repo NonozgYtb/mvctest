@@ -69,37 +69,35 @@ body {
     }
 }
 
-ul.list-group.ayer a.list-group-item {
-    cursor: pointer;
-}
-
-.list-group-item.li-header {
-    border: none;
-    padding-bottom: 0 !important;
-    text-transform: uppercase;
-    font-weight: bolder;
-    color: #ffffff47;
-    margin-bottom: -5px;
-}
-
-.list-group-flush .list-group-item:last-child {
-    border-bottom: unset;
-}
-
-ul.list-group .list-group-item {
-    padding: 0.5rem 0.75rem;
+.list-group {
+    &.ayer a.list-group-item {
+        cursor: pointer;
+    }
+    &-item.li-header {
+        border: none;
+        padding-bottom: 0 !important;
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: #ffffff47;
+        margin-bottom: -5px;
+    }
+    &-flush .list-group-item:last-child {
+        border-bottom: unset;
+    }
+    & .list-group-item {
+        padding: 0.5rem 0.75rem;
+    }
+    &-flush.spearater-white .list-group-item {
+        border: 1px solid transparent;
+    }
 }
 
 .spacism {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .ul-transparent .list-group-item {
     background: transparent;
-}
-
-.list-group-flush.spearater-white .list-group-item {
-    border: 1px solid transparent;
 }
 
 .carder-button {

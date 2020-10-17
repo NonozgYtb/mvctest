@@ -2,6 +2,14 @@
 
 use App\Render;
 use App\Config\Singletons\RouterSingletons;
+
+$arr = [
+  "index" => "Accueil",
+  "news" => "News",
+  "staff" => "Équipe",
+  "history" => "Histoire"
+];
+
 $body = Render::getInstance()->getBody(); ?>
 <nav class="navbar navbar-expand-lg navbar-dark <?= (isset($body["stiky-nav"]) && $body["stiky-nav"] == true) ? "nav" : "fixed" ?>-top navbar-shrink" id="mainNav">
   <div class="container">
@@ -13,7 +21,6 @@ $body = Render::getInstance()->getBody(); ?>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
         <?php
-        $arr = ["index" => "Accueil", "news" => "News", "partners" => "Partenaires", "history" => "Histoire"];
         foreach ($arr as $name => $str) : ?>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger<?= (Render::getInstance()->getHead()["pagename"] == $name) ? " active" : "" ?>" href="<?= RouterSingletons::AltoRouter()->generate($name) ?>"><?= $str ?></a>
@@ -39,46 +46,46 @@ $body = Render::getInstance()->getBody(); ?>
       </li>*/ ?>
 
 <?= Render::getInstance()->getContent() ?>
-<?php if(!isset($body["no-footer"]) || $body["no-footer"] !== true):
-  ?>
-<footer class="bg-secondary color-white footer">
-  <div class="container">
-    <div class="row align-items-center font-weight-bold m-0">
-      <div class="col-md-4">
-        <span class="copyright">Copyright </span><i class="fas fa-copyright"></i><span class="copyright"> BunkerFinal 2020 </div>
-      <div class="col-md-4">
-        <ul class="list-inline social-buttons">
-          <li class="list-inline-item">
-            <a href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <ul class="list-inline quicklinks">
-          <li class="list-inline-item">
-            <a href="mentionslegales" class="color-white">Mentions légales</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#" class="color-white">CGU</a>
-          </li>
-        </ul>
+<?php if (!isset($body["no-footer"]) || $body["no-footer"] !== true) :
+?>
+  <footer class="bg-secondary color-white footer">
+    <div class="container">
+      <div class="row align-items-center font-weight-bold m-0">
+        <div class="col-md-4">
+          <span class="copyright">Copyright </span><i class="fas fa-copyright"></i><span class="copyright"> BunkerFinal 2020 </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="mentionslegales" class="color-white">Mentions légales</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="color-white">CGU</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-<?php endif;?>
+  </footer>
+<?php endif; ?>
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

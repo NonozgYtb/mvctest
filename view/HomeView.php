@@ -13,7 +13,7 @@
 </header>
 
 <!-- Trailer -->
-<section class="bg-gray-300 page-section py-5" id="services">
+<section class="bg-gray-300 page-section py-5" id="trailer">
   <div class="container max-w0 m-0">
     <div class="row max-w0 m-0">
       <div class="col-lg-12 text-center">
@@ -28,7 +28,7 @@
 </section>
 
 <!-- Services -->
-<section class="bg-secondary color-white page-section py-5" id="services">
+<section class="bg-secondary color-white page-section py-5" id="others1">
   <div class="container">
     <div class="row m-0">
       <div class="col-lg-12 text-center">

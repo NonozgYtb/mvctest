@@ -3,6 +3,7 @@
 namespace App;
 
 use \App\Controller\AppController;
+use App\Utils\Str;
 
 class Router
 {
@@ -17,7 +18,7 @@ class Router
         $this
             ->setRoutes()
             ->match();
-        
+
         return $this;
     }
 
@@ -28,7 +29,7 @@ class Router
             // map homepage
             ->map('GET', '/', 'home:index', "index")
             ->map('GET', '/news', 'home:news', "news")
-            ->map('GET', '/partners', 'home:partners', 'partners')
+            ->map('GET', '/staff', 'home:staff', 'staff')
             ->map('GET', '/history', 'home:history', 'history')
             ->map('GET', '/login', 'login:login', 'login')
             ->map('GET', '/logger', 'login:login', 'login2')
@@ -48,7 +49,7 @@ class Router
         } else {
             $ip = $_SERVER['REMOTE_ADDR'];
         }
-        $logs = "[" . date("Y/m/d : H:i:s (P)") . "] ".$ip." ";
+        $logs = "[" . date("Y/m/d : H:i:s (P)") . "] " . $ip . " ";
         if ($match && isset($match["target"]) && gettype($match["target"]) == "string" && !empty(trim($match["target"]))) {
             $ex = [];
             $matches = explode("/", $match["target"]);
@@ -68,8 +69,7 @@ class Router
         } else {
             $logs .= " " . $_SERVER["REQUEST_URI"] . " ";
             $dir = dirname(__DIR__) . DS . "public" . DS . str_replace("/", DS, $_SERVER["REQUEST_URI"]);
-            if ((int)strpos($dir, "favicon.ico") === 0) {
-            } elseif (isset($match["target"])) {
+            if (isset($match["target"])) {
                 $logs .= "Error: Undefined Controller or View";
             } elseif (!file_exists($dir)) {
                 $logs .= "Error: No routes";
@@ -84,9 +84,9 @@ class Router
             AppController::execute("", "ErrorController", "index");
         }
         try {
-            file_put_contents(dirname(__DIR__) . DS . "config" . DS . "RouterLog.txt", "\n" . $logs, FILE_APPEND);
+            if (!empty($logs) && !Str::strContainArray($logs, [".css", ".ico"]))
+                file_put_contents(dirname(__DIR__) . DS . "config" . DS . "RouterLog.txt", $logs."\n", FILE_APPEND);
         } catch (\Throwable $e) {
-            
         }
 
         return $this;

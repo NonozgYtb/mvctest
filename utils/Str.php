@@ -4,43 +4,50 @@ namespace App\Utils;
 
 class Str
 {
-    public static function startsWith($haystack, $needle)
+    public static function strContainArray($str, $arrCondition)
     {
-        $length = strlen($needle);
-        return substr($haystack, 0, $length) === $needle;
-    }
-    public static function secondStartsWith($haystack, $needle)
-    {
-        $length = strlen($needle);
-        return substr($haystack, 1, $length) === $needle;
+        if (empty($str) && empty($arrCondition)) return false;
+        foreach ($arrCondition as $item) {
+            if (strpos($str, $item) !== FALSE) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    public static function endsWith($haystack, $needle)
+    public static function startsWith($str, $condition)
     {
-        $length = strlen($needle);
+        if (empty($str) && empty($condition)) return false;
+        $length = strlen($condition);
+        return substr($str, 0, $length) === $condition;
+    }
+    public static function secondStartsWith($str, $condition)
+    {
+        if (empty($str) && empty($condition)) return false;
+        $length = strlen($condition);
+        return substr($str, 1, $length) === $condition;
+    }
+
+    public static function endsWith($str, $condition)
+    {
+        if (empty($str) && empty($condition)) return false;
+        $length = strlen($condition);
         if (!$length) {
             return true;
         }
-        return substr($haystack, -$length) === $needle;
+        return substr($str, -$length) === $condition;
     }
 
-    public static function secondEndsWith($haystack, $needle)
+    public static function secondEndsWith($str, $condition)
     {
-        $length = strlen($needle);
+        if (empty($str) && empty($condition)) return false;
+        $length = strlen($condition);
         if (!$length) {
             return true;
         }
-        return substr(substr($haystack, 0, -1), -$length) === $needle;
+        return substr(substr($str, 0, -1), -$length) === $condition;
     }
 
-    /**
-     * customRandStr
-     *
-     * @param  int $lenght - Nombre de caractère
-     * @return string - Chaine de caractère random
-     * 
-     * @default `$lenght`　=　`12`
-     */
     public static function customRandStr($lenght = 12)
     {
         $seed = str_split(
@@ -58,9 +65,9 @@ class Str
     {
         $return = [];
         $var = explode("/", $url);
-            foreach ($var as $key => $val) {
-                (!empty($val)) ? $return[] = ucwords($val) : false;
-            }
-            return implode("/", $return);
+        foreach ($var as $key => $val) {
+            (!empty($val)) ? $return[] = ucwords($val) : false;
+        }
+        return implode("/", $return);
     }
 }
