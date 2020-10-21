@@ -13,7 +13,7 @@ $arr = [
 $body = Render::getInstance()->getBody(); ?>
 <nav class="navbar navbar-expand-lg navbar-dark <?= (isset($body["stiky-nav"]) && $body["stiky-nav"] == true) ? "nav" : "fixed" ?>-top navbar-shrink" id="mainNav">
   <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="fas fa-radiation" style="padding-right: 10px"></span>BunkerFinal</a>
+    <a class="navbar-brand js-scroll-trigger" href="<?= RouterSingletons::AltoRouter()->generate("index") ?>"><span class="fas fa-radiation" style="padding-right: 10px"></span>BunkerFinal</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fas fa-bars"></i>
@@ -86,6 +86,8 @@ $body = Render::getInstance()->getBody(); ?>
     </div>
   </footer>
 <?php endif; ?>
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top bg-primary color-white" role="button"><i class="fas fa-chevron-up"></i></a>
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -419,3 +419,11 @@ body {
     width: 70%;
     font-size: 70%;
 }
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    border: none;
+}

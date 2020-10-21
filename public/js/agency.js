@@ -1,5 +1,24 @@
 (function ($) {
   "use strict"; // Start of use strict
+  if ($('#back-to-top').length == 1) {
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#back-to-top').fadeIn();
+        } else {
+          $('#back-to-top').fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $('#back-to-top').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 400);
+        return false;
+      });
+    });
+  }
+
 
   var carouselId = '#homeCarousel';
   var carousel = $(carouselId)
