@@ -4,8 +4,7 @@
 <header class="masthead" id="top">
   <div class="container-fluid m-0" style="max-width: unset !important;">
     <div class="intro-text">
-      <div class="intro-lead-in">BunkerFinal</div>
-      <div class="intro-heading text-uppercase">UN SERVEUR EN DEV</div>
+      <div class="intro-heading text-uppercase">BunkerFinal</div>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" download="blink.txt" href="#">Luncher</a>
       <link rel="icon" type="image/png" href="/img/logos/logo Dev'&'Cie.png">
     </div>

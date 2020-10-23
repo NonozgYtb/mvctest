@@ -39,13 +39,12 @@ class HomeController
         $this->render->loadView("history");
         return true;
     }
-    
-    public function login()
+
+    public function tester()
     {
-        $this->render->setHead("Connexion", "title");
-        $this->render->loadView("login");
+        $this->render->setHead("Test", "title");
+        $this->render->loadView("tester");
         return true;
     }
     
 }
-?>

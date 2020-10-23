@@ -2,3 +2,4 @@ composer.phar
 /vendor/
 composer.lock
 /config/RouterLog.txt
+*.scssc

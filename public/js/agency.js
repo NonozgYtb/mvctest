@@ -19,12 +19,15 @@
     });
   }
 
+  $( "[id^='aa-']" ).toArray().forEach(element => {
+    console.log(element);
+  });
 
-  var carouselId = '#homeCarousel';
+  var carouselId = '#carousel-CC';
   var carousel = $(carouselId)
   if (carousel != undefined) {
     carousel.carousel({
-      interval: 900000,
+      interval: 1000000,
       keyboard: false,
     });
   };

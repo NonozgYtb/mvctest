@@ -26,6 +26,7 @@ class Render
 
     private function __construct()
     {
+        $this->template = "blank";
     }
 
     /**
@@ -77,18 +78,17 @@ class Render
 
     public function render()
     {
-        $this->getRequireResult("./view/".Str::strUrlUc($this->view)."View.php", "content");
+        $this->getRequireResult("./view/" . Str::strUrlUc($this->view) . "View.php", "content");
         (!empty($this->template)) ? $templateName = $this->template : $templateName = "blank";
-        $templateUrl = "./template/".(Str::strUrlUc($templateName)??"hhii")."Template.php";
+        $templateUrl = "./template/" . (Str::strUrlUc($templateName) ?? "hhii") . "Template.php";
         $template = $this->getRequireResult($templateUrl, "s4uP257fDq8BayrdQCm9FkMIozYEZGWphxlnRSvtAw6ib0jNgJ");
         Indenter::Indenter()->indent(RenderTemplate::render($template), true);
-        
     }
 
     private function getRequireResult($url, $thiser)
     {
-        if(!file_exists($url)) throw new RenderingException('File not exist ('.$url.')', 400);
-        
+        if (!file_exists($url)) throw new RenderingException('File not exist (' . $url . ')', 400);
+
         ob_start();
         require($url);
         $this->$thiser = ob_get_clean();

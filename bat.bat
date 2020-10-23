@@ -1,1 +1,1 @@
-sass ./public/scss/agency.scss:./public/css/agency.css --no-cache --watch
+sass ./public/scss/agency.scss:./public/css/agency.css --watch

@@ -25,5 +25,6 @@ return array(
     'App\\Template\\' => array($baseDir . '/template'),
     'App\\Controller\\' => array($baseDir . '/controller'),
     'App\\Config\\' => array($baseDir . '/config'),
+    'App\\Components\\' => array($baseDir . '/components'),
     'App\\' => array($baseDir . '/app'),
 );

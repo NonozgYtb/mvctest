@@ -24,7 +24,7 @@ body {
 .carousel {
     background: #212529;
 
-    &-item img {
+    .carousel-item img {
         min-height: 300px;
         height: auto;
         max-height: 475px;
@@ -32,9 +32,22 @@ body {
         object-fit: cover;
     }
 
-    &-caption h5 {
-        border-bottom: 2px #ffffff36 solid;
-        padding-bottom: 6px;
+    .carousel-caption {
+        h5 {
+            border-bottom: 2px #ffffff36 solid;
+            padding-bottom: 6px;
+            margin-bottom: 0px;
+            &.dark {
+                border-color: #525252a1;
+            }
+        }
+        p {
+            margin-bottom: 0;
+        }
+        background: #ffffff14;
+        padding: 10px;
+        bottom: 35px;
+        padding-bottom: 5px;
     }
 
     .carousel-progress-bar {
@@ -49,7 +62,7 @@ body {
         bottom: 0;
     }
 
-    &-control {
+    .carousel-control {
         z-index: 11;
     }
 

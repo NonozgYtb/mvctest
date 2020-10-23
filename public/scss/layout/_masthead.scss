@@ -1,55 +1,42 @@
 // Styling for the masthead
 header.masthead {
-  text-align: center;
-  color: white;
-  background-image: url('/img/header-bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
-  & > .container-fluid {
-    background: radial-gradient(transparent, #000000);
-    padding: 0 !important;
-  }
-  .intro-text {
-    background: linear-gradient(45deg, #00000059, #00000066);
-    padding-top: 150px;
-    padding-bottom: 100px;
-    .intro-lead-in {
-      font-size: 22px;
-      font-style: italic;
-      line-height: 22px;
-      margin-bottom: 25px;
-      @include serif-font;
+    text-align: center;
+    color: white;
+    background-image: url("/img/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    & > .container-fluid {
+        background: radial-gradient(transparent, #000000);
+        padding: 0 !important;
     }
-    .intro-heading {
-      font-size: 50px;
-      font-weight: 700;
-      line-height: 50px;
-      margin-bottom: 25px;
-      @include heading-font;
-    }
-  }
-}
-@media(min-width:768px) {
-  header.masthead {
     .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
-      .intro-lead-in {
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
-        margin-bottom: 25px;
-        @include serif-font;
-      }
-      .intro-heading {
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-        margin-bottom: 50px;
-        @include heading-font;
-      }
+        background: linear-gradient(45deg, #00000059, #00000066);
+        padding-top: 150px;
+        padding-bottom: 100px;
+        .intro-heading {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+            margin-bottom: 25px;
+            /*font-family: "Staatliches", "Montserrat", "Segoe UI", "Roboto",
+                "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+                "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";*/
+            @include script-font;
+            letter-spacing: 10px;
+        }
     }
-  }
+}
+@media (min-width: 768px) {
+    header.masthead {
+        .intro-text {
+            padding-top: 300px;
+            padding-bottom: 200px;
+            .intro-heading {
+                font-size: 50px;
+                line-height: 50px;
+            }
+        }
+    }
 }

@@ -31,6 +31,8 @@ class Router
             ->map('GET', '/news', 'home:news', "news")
             ->map('GET', '/staff', 'home:staff', 'staff')
             ->map('GET', '/history', 'home:history', 'history')
+            ->map('GET', '/tester', 'home:tester', 'tester')
+
             ->map('GET', '/login', 'login:login', 'login')
             ->map('GET', '/logger', 'login:login', 'login2')
             ->map('POST', '/logger', 'login:loginPost', 'logger');

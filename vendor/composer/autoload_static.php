@@ -58,6 +58,7 @@ class ComposerStaticInit99bc08ac1e5ba30e2fd64a8bca526428
             'App\\Template\\' => 13,
             'App\\Controller\\' => 15,
             'App\\Config\\' => 11,
+            'App\\Components\\' => 15,
             'App\\' => 4,
         ),
     );
@@ -138,6 +139,10 @@ class ComposerStaticInit99bc08ac1e5ba30e2fd64a8bca526428
         'App\\Config\\' => 
         array (
             0 => __DIR__ . '/../..' . '/config',
+        ),
+        'App\\Components\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/components',
         ),
         'App\\' => 
         array (
