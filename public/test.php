@@ -11,13 +11,13 @@
 <body>
   <?php
   require_once("../vendor/autoload.php");
-  $lengt = 8;
+  $length = 8;
   function dec2arr($dec): array
   {
-    global $lengt;
+    global $length;
     $bin = decbin($dec);
     $str = array_reverse(str_split($bin));
-    for ($i = count($str); $i < $lengt; $i++) {
+    for ($i = count($str); $i < $length; $i++) {
       $str[$i] = "0";
     };
     return $str;

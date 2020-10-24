@@ -1,4 +1,7 @@
 <?= \App\Render::getInstance()->setTemplate("test")->setBody(true, "no-footer") ?>
+<div class="backgrounder" data-bg-hider="true" data-bg-url="http://thepatternlibrary.com/img/au.jpg" style="
+    filter: brightness(0.12);
+"></div>
 <form action="<?= App\Config\Singletons\RouterSingletons::AltoRouter()->generate("logger")?>" class="form-signin" method="POST">
     <h1 class="h3 mb-3 font-weight-normal">
         Connexion

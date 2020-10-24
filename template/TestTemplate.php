@@ -19,18 +19,20 @@ $body = Render::getInstance()->getBody(); ?>
       <i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav text-uppercase ml-auto">
+      <ul class="navbar-nav text-uppercase mr-auto">
         <?php
         foreach ($arr as $name => $str) : ?>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger<?= (Render::getInstance()->getHead()["pagename"] == $name) ? " active" : "" ?>" href="<?= RouterSingletons::AltoRouter()->generate($name) ?>"><?= $str ?></a>
           </li>
         <?php endforeach; ?>
-        <li class="nav-item mx-auto mr-lg-0 ml-lg-4">
-          <a style="font-size: 0.8em;" href="<?= RouterSingletons::AltoRouter()->generate("login") ?>" class="btn btn-primary rounded-pill btn-md text-uppercase js-scroll-trigger color-black">Se Connecter</a>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a style="font-size: 0.8em;" href="<?= RouterSingletons::AltoRouter()->generate("login") ?>" class="btn btn-primary rounded-pill btn-md text-uppercase js-scroll-trigger color-black mx-auto">Se Connecter</a>
         </li>
       </ul>
     </div>
+
   </div>
 </nav>
 <?php /*<li class="nav-item dropdown">
