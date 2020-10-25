@@ -4,9 +4,10 @@ RewriteRule ^(public)($|/) - [L]
 RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
 RewriteRule ^ public%{REQUEST_URI} [L]
 RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI}.php -f
-RewriteRule ^ public%{REQUEST_URI} [L]
+RewriteRule ^ public%{REQUEST_URI}.php [L]
 RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI}index.php -f
-RewriteRule ^ public%{REQUEST_URI} [L]
+RewriteRule ^ public%{REQUEST_URI}index.php [L]
 RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI}/index.php -f
-RewriteRule ^ public%{REQUEST_URI} [L]
+RewriteRule ^ public%{REQUEST_URI}/index.php [L]
+
 RewriteRule . index.php [L]
