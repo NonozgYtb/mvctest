@@ -116,3 +116,9 @@ $custom-colors: map-merge(
 
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+$displays: block, contents, flex, flow, flow-root, grid, inherit, initial, inline, inline-block, 
+	inline-flex, inline-grid, inline-table, list-item, none, revert, table, table-caption, 
+	table-cell, table-column, table-column-group, table-footer-group, table-header-group, 
+	table-row, table-row, table-row-group, unset;

@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'TrendSans-One';
+    src: url('src/TrendSansW00-One.eot');
+    src: url('src/TrendSansW00-One.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-One.woff2') format('woff2'),
+        url('src/TrendSansW00-One.woff') format('woff'),
+        url('src/TrendSansW00-One.ttf') format('truetype'),
+        url('src/TrendSansW00-One.svg#TrendSansW00-One') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-Five';
+    src: url('src/TrendSansW00-Five.eot');
+    src: url('src/TrendSansW00-Five.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-Five.woff2') format('woff2'),
+        url('src/TrendSansW00-Five.woff') format('woff'),
+        url('src/TrendSansW00-Five.ttf') format('truetype'),
+        url('src/TrendSansW00-Five.svg#TrendSansW00-Five') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-One';
+    src: url('src/TrendSansOne.eot');
+    src: url('src/TrendSansOne.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansOne.woff2') format('woff2'),
+        url('src/TrendSansOne.woff') format('woff'),
+        url('src/TrendSansOne.ttf') format('truetype'),
+        url('src/TrendSansOne.svg#TrendSansOne') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-Three';
+    src: url('src/TrendSansW00-Three.eot');
+    src: url('src/TrendSansW00-Three.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-Three.woff2') format('woff2'),
+        url('src/TrendSansW00-Three.woff') format('woff'),
+        url('src/TrendSansW00-Three.ttf') format('truetype'),
+        url('src/TrendSansW00-Three.svg#TrendSansW00-Three') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-Four';
+    src: url('src/TrendSansW00-Four.eot');
+    src: url('src/TrendSansW00-Four.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-Four.woff2') format('woff2'),
+        url('src/TrendSansW00-Four.woff') format('woff'),
+        url('src/TrendSansW00-Four.ttf') format('truetype'),
+        url('src/TrendSansW00-Four.svg#TrendSansW00-Four') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-FiveItalic';
+    src: url('src/TrendSansW00-FiveItalic.eot');
+    src: url('src/TrendSansW00-FiveItalic.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-FiveItalic.woff2') format('woff2'),
+        url('src/TrendSansW00-FiveItalic.woff') format('woff'),
+        url('src/TrendSansW00-FiveItalic.ttf') format('truetype'),
+        url('src/TrendSansW00-FiveItalic.svg#TrendSansW00-FiveItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-FourItalic';
+    src: url('src/TrendSansW00-FourItalic.eot');
+    src: url('src/TrendSansW00-FourItalic.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-FourItalic.woff2') format('woff2'),
+        url('src/TrendSansW00-FourItalic.woff') format('woff'),
+        url('src/TrendSansW00-FourItalic.ttf') format('truetype'),
+        url('src/TrendSansW00-FourItalic.svg#TrendSansW00-FourItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-OneItalic';
+    src: url('src/TrendSansW00-OneItalic.eot');
+    src: url('src/TrendSansW00-OneItalic.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-OneItalic.woff2') format('woff2'),
+        url('src/TrendSansW00-OneItalic.woff') format('woff'),
+        url('src/TrendSansW00-OneItalic.ttf') format('truetype'),
+        url('src/TrendSansW00-OneItalic.svg#TrendSansW00-OneItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-ThreeItalic';
+    src: url('src/TrendSansW00-ThreeItalic.eot');
+    src: url('src/TrendSansW00-ThreeItalic.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-ThreeItalic.woff2') format('woff2'),
+        url('src/TrendSansW00-ThreeItalic.woff') format('woff'),
+        url('src/TrendSansW00-ThreeItalic.ttf') format('truetype'),
+        url('src/TrendSansW00-ThreeItalic.svg#TrendSansW00-ThreeItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-TwoItalic';
+    src: url('src/TrendSansW00-TwoItalic.eot');
+    src: url('src/TrendSansW00-TwoItalic.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-TwoItalic.woff2') format('woff2'),
+        url('src/TrendSansW00-TwoItalic.woff') format('woff'),
+        url('src/TrendSansW00-TwoItalic.ttf') format('truetype'),
+        url('src/TrendSansW00-TwoItalic.svg#TrendSansW00-TwoItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TrendSans-Two';
+    src: url('src/TrendSansW00-Two.eot');
+    src: url('src/TrendSansW00-Two.eot?#iefix') format('embedded-opentype'),
+        url('src/TrendSansW00-Two.woff2') format('woff2'),
+        url('src/TrendSansW00-Two.woff') format('woff'),
+        url('src/TrendSansW00-Two.ttf') format('truetype'),
+        url('src/TrendSansW00-Two.svg#TrendSansW00-Two') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

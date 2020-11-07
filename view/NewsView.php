@@ -25,7 +25,7 @@ $progress = [
         <div class="row m-0">
             <div class="col-12 col-md-8 col-xl-9">
                 <h2 style="border-bottom: rgba(255, 255, 255, 0.1) 1px solid;">Avancement du serveur</h2>
-                <div class="mb-3">Plusieurs parties du serveur sont en développement. Voici l'avancement de ces domaines.</div>
+                <div class="mb-3" style="margin-top: 900px">Plusieurs parties du serveur sont en développement. Voici l'avancement de ces domaines.</div>
                 <div style="background: #1b1f22; padding: 25px 15px; box-shadow: 0 0 9px 0px black; border-radius: 6px;">
                     <div class="pl-2">- Lancement de l'<strong>Alpha</strong> privée effectué depuis le <strong>25 juillet 2020</strong> !</div>
                     <div class="pl-2 mt-2 mb-5">- Changement de <strong>version</strong> du serveur, passage en <strong>1.12.2</strong></div>
@@ -39,7 +39,7 @@ $progress = [
                 </div>
             </div>
             <div class="col-12 m-0 pt-3 pt-md-0 col-md-4 col-xl-3">
-                <ul class="list-group list-group-flush spearater-white ul-transparent">
+                <ul class="news-li list-group list-group-flush spearater-white ul-transparent" style="position: sticky;top: 75px;background: #0000001f;border-radius: 8px;box-shadow: 8px 12px 4px -4px #0000007a;border: 1px solid #00000063;">
                     <div class="spacism">
                         <li class="list-group-item li-header">
                             <span>v1.1.2</span>

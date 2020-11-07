@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'TrendSans-TwoItalic';
+  src: url('src/TrendSansW00-TwoItalic.eot');
+  src: url('src/TrendSansW00-TwoItalic.eot?#iefix') format('embedded-opentype'),
+    url('src/TrendSansW00-TwoItalic.woff2') format('woff2'),
+    url('src/TrendSansW00-TwoItalic.woff') format('woff'),
+    url('src/TrendSansW00-TwoItalic.ttf') format('truetype'),
+    url('src/TrendSansW00-TwoItalic.svg#TrendSansW00-TwoItalic') format('svg');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'TrendSans-Two';
+  src: url('src/TrendSansW00-Two.eot');
+  src: url('src/TrendSansW00-Two.eot?#iefix') format('embedded-opentype'),
+    url('src/TrendSansW00-Two.woff2') format('woff2'),
+    url('src/TrendSansW00-Two.woff') format('woff'),
+    url('src/TrendSansW00-Two.ttf') format('truetype'),
+    url('src/TrendSansW00-Two.svg#TrendSansW00-Two') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

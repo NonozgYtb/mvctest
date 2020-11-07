@@ -26,40 +26,25 @@
   </div>
 </section>
 
-<!-- Services -->
-<section class="bg-secondary color-white page-section py-5" id="others1">
-  <div class="container">
+<!-- Teaser -->
+<section class="bg-secondary color-white page-section py-5 px-2 px-lg-5" id="others1">
+  <div class="container-fluid px-2 px-lg-5">
     <div class="row m-0">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Lorem ipsum here!</h2>
+        <h2 class="section-heading text-uppercase">Teaser</h2>
         <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod perspiciatis totam aperiam esse reprehenderit aliquid, neque itaque voluptas id blanditiis deserunt delectus at cum sunt harum eligendi iste labore vero!</h3>
-      </div>
+	  </div>
     </div>
     <div class="row m-0 text-center">
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x text-primary"></i>
-          <i class="fas fa-server fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="service-heading">Consectetur adipisicing elit</h4>
-        <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis provident voluptates impedit?</p>
-      </div>
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x text-primary"></i>
-          <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="service-heading">Consectetur adipisicing elit</h4>
-        <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis provident voluptates impedit?</p>
-      </div>
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x text-primary"></i>
-          <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="service-heading">Consectetur adipisicing elit</h4>
-        <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis provident voluptates impedit?</p>
-      </div>
+      <div class="col-sm d-grid">
+        <div class="my-auto">
+		  <h4 class="service-heading">Consectetur adipisicing elit</h4>
+          <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis provident voluptates impedit?</p>
+        </div>
+	  </div>
+      <div class="col-sm d-grid" style="max-width: 600px">
+		<img src="/img/bg2.jpg" class="w-100 my-auto" alt="">
+	  </div>
     </div>
   </div>
 </section>
@@ -107,7 +92,7 @@
 
 <!-- Contact -->
 <section class="page-section pt-5 pb-0 pb-md-5" id="contact">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row m-0">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Contactez-nous</h2><br>
@@ -149,3 +134,15 @@
     </div>
   </div>
 </section>
+
+<div style="background-image: url(/img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -100;
+"></div>

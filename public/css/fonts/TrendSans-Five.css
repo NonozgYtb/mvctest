@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'TrendSans-Five';
+  src: url('src/TrendSansW00-Five.eot');
+  src: url('src/TrendSansW00-Five.eot?#iefix') format('embedded-opentype'),
+    url('src/TrendSansW00-Five.woff2') format('woff2'),
+    url('src/TrendSansW00-Five.woff') format('woff'),
+    url('src/TrendSansW00-Five.ttf') format('truetype'),
+    url('src/TrendSansW00-Five.svg#TrendSansW00-Five') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

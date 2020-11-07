@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'TrendSans-FourItalic';
+  src: url('src/TrendSansW00-FourItalic.eot');
+  src: url('src/TrendSansW00-FourItalic.eot?#iefix') format('embedded-opentype'),
+    url('src/TrendSansW00-FourItalic.woff2') format('woff2'),
+    url('src/TrendSansW00-FourItalic.woff') format('woff'),
+    url('src/TrendSansW00-FourItalic.ttf') format('truetype'),
+    url('src/TrendSansW00-FourItalic.svg#TrendSansW00-FourItalic') format('svg');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}

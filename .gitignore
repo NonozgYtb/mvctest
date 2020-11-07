@@ -5,3 +5,4 @@ composer.lock
 /.sass-cache/
 *.scssc
 *.css.map
+*.zip
