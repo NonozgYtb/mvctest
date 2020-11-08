@@ -27,7 +27,7 @@
 </section>
 
 <!-- Teaser -->
-<section class="bg-secondary color-white page-section py-5 px-2 px-lg-5" id="others1">
+<section class="bg-transparent color-white page-section py-5 px-2 px-lg-5" id="others1">
   <div class="container-fluid px-2 px-lg-5">
     <div class="row m-0">
       <div class="col-lg-12 text-center">
@@ -91,7 +91,7 @@
 </div>
 
 <!-- Contact -->
-<section class="page-section pt-5 pb-0 pb-md-5" id="contact">
+<section class="bg-transparent page-section pt-5 pb-0 pb-md-5" id="contact">
   <div class="container-fluid">
     <div class="row m-0">
       <div class="col-lg-12 text-center">
@@ -135,7 +135,7 @@
   </div>
 </section>
 
-<div style="background-image: url(/img/bg.jpg);
+<div style="background-image: url('//bunkerfinal.com/photos/fond.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

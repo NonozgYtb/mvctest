@@ -62,8 +62,20 @@
     }
   });
 
+  function makeid(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+
+  var __key = makeid(12);
+
   var __ = () => {
-    //console.clear()
+    console.clear()
     var color = (() => {
       var color = getComputedStyle(document.documentElement)
         .getPropertyValue('--primary').trim();
@@ -79,10 +91,11 @@
     console.log(`%cN'écrit rien ici, c'est dangeureux... Vraiment je rigole pas ! %c`,
       `color: ${color}; padding: 10px; font-size: 20px`, "color: initial");
   };
-  /*__()
-  setTimeout(__, 2000);
-  setInterval(__, 10000);
-  $("iframe").toArray().forEach((el) => el.addEventListener('*', __()))*/
+  //__()
+  //setTimeout(__, 2000)
+  //setTimeout(__, 4000)
+  //window["pp"+__key] = setInterval(__, 10000);
+  $("iframe").toArray().forEach((el) => el.addEventListener('*', __()))
 
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function () {

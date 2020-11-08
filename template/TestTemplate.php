@@ -108,5 +108,5 @@ $body = Render::getInstance()->getBody(); ?>
   ->setHeadStr('<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">')
   ->setHeadStr('<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">')
   ->setHeadStr('<link href="css/agency.css" rel="stylesheet">')
-  ->setHeadStr('<link href="css/fonts/TrendSansW00-Four.css" rel="stylesheet">')
+  ->setHeadStr('<link href="css/fonts/TrendSans.css" rel="stylesheet">')
   ->setHeadStr('<link rel="icon" href="/icon/favicon.jpg" sizes="240x240">') ?>
